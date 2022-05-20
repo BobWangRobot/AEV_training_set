@@ -31,7 +31,7 @@ It means that both PDBs have helix 1 and helix 2, but helix 1 from the manual se
 
 There are 3 parameters of  **Status**: **get, more, less**. 
 
-|Parameters |Describetion|
+|Parameters |Description|
 |-----------|------------|
 |**get**    |the training PDB get the helix which is also in the manual PDB.
 |**more**   |the training PDB has the 'wrong' helix which is not in the manual PDB.
@@ -39,7 +39,7 @@ There are 3 parameters of  **Status**: **get, more, less**.
 
 There are also 5 parameters of **length**: **same, identical, shoter, longer, None**.
 
-|Parameters |Describetion|
+|Parameters |Description|
 |-----------|------------|
 |**identical**|tow helices are identical.
 |**same**   |the length of two helices are identical but start residues are differnt.
