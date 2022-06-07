@@ -41,7 +41,7 @@ def compare_helices(file1, file2):
             if h1.start_resseq == h2.start_resseq:
               length = 'identical'
               start = h1.start_resname + h1.start_resseq
-              end = h1.end_resname + h1.start_resseq
+              end = h1.end_resname + h1.end_resseq
               out = format % (helix_id, status, length, start, end)
               output.append(out)
               find_in_h2.append(h2)
@@ -85,7 +85,7 @@ def compare_helices(file1, file2):
       status = 'less'
       length = 'None'
       start = h1.start_resname + h1.start_resseq
-      end = h1.end_resname + h1.start_resseq
+      end = h1.end_resname + h1.end_resseq
       out = format % (helix_id, status, length, start, end)
       output.append(out)
       find_in_h2.append(h2)
@@ -94,8 +94,8 @@ def compare_helices(file1, file2):
       status = 'more'
       length = 'None'
       helix_id = 'None'
-      start = h1.start_resname + h1.start_resseq
-      end = h1.end_resname + h1.start_resseq
+      start = h3.start_resname + h3.start_resseq
+      end = h3.end_resname + h3.end_resseq
       out = format % (helix_id, status, length, start, end)
       output.append(out)
   title = format % ('ID', 'Status', 'length', 'start_res', 'end_res')
