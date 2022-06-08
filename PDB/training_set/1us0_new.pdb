@@ -5,9 +5,10 @@ HELIX    4   4 ILE A  137  ASP A  149  1                                  13
 HELIX    5   5 HIS A  163  LEU A  170  1                                   8
 HELIX    6   6 GLU A  193  SER A  201  1                                   9
 HELIX    7   7 PRO A  231  HIS A  240  1                                  10
-HELIX    8   8 THR A  244  MET A  253  1                                  10
-HELIX    9   9 PRO A  266  PHE A  273  1                                   8
-HELIX   10  10 SER A  282  SER A  290  1                                   9
+HELIX    8   8 THR A  244  LEU A  248  1                                   5
+HELIX    9   9 ILE A  249  MET A  253  1                                   5
+HELIX   10  10 PRO A  266  PHE A  273  1                                   8
+HELIX   11  11 SER A  282  SER A  290  1                                   9
 CRYST1   49.280   66.590   47.260  90.00  92.40  90.00 P 1 21 1
 SCALE1      0.020292  0.000000  0.000850        0.00000
 SCALE2      0.000000  0.015017  0.000000        0.00000

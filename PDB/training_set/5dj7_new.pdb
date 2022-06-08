@@ -1,6 +1,5 @@
-HELIX    1   1 ASP A  109  PRO A  115  1                                   7
-HELIX    2   2 ASP A  147  ALA A  153  1                                   7
-HELIX    3   3 TYR A  215  ASN A  223  1                                   9
+HELIX    1   1 ASP A  147  ALA A  153  1                                   7
+HELIX    2   2 TYR A  215  ASN A  223  1                                   9
 CRYST1   41.682   47.433   53.680  90.00 106.20  90.00 P 1 21 1
 SCALE1      0.023991  0.000000  0.006970        0.00000
 SCALE2      0.000000  0.021082  0.000000        0.00000

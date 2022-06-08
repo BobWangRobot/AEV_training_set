@@ -2,7 +2,8 @@ HELIX    1   1 LYS A 1097  GLU A 1103  1                                   7
 HELIX    2   2 ILE A 1155  LYS A 1167  1                                  13
 HELIX    3   3 ARG A 1190  GLU A 1199  1                                  10
 HELIX    4   4 GLU A 1226  ASP A 1231  1                                   6
-HELIX    5   5 GLY A 1246  HIS A 1264  1                                  19
+HELIX    5   5 PRO A 1247  GLN A 1252  1                                   6
+HELIX    6   6 CYS A 1255  GLU A 1260  1                                   6
 CRYST1   48.480   72.108   84.908  90.00  90.00  90.00 P 21 21 21
 SCALE1      0.020627  0.000000  0.000000        0.00000
 SCALE2      0.000000  0.013868  0.000000        0.00000

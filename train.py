@@ -11,8 +11,6 @@ from mmtbx.conformation_dependent_library import generate_protein_threes
 
 fmt_helix="HELIX%5d%4d %3s %s%5d  %3s %s%5s%3s                                 %3d"
 
-def input_file():
-  pass
 
 def get_ss(hierarchy,
            sec_str_from_pdb_file=None,
@@ -157,8 +155,6 @@ def merge_methods(file_name):
   pdb_hierarchy.atoms().reset_i_seq()
   atoms = pdb_hierarchy.atoms()
   sec_str_from_pdb_file = pdb_inp.extract_secondary_structure()
-  print(dir(sec_str_from_pdb_file.filter_helix_records))
-  print(sec_str_from_pdb_file.filter_helix_records())
   # SS annotations
   from_header = get_ss(
     hierarchy=pdb_hierarchy,
@@ -174,8 +170,6 @@ def merge_methods(file_name):
   helix_recs = []
   cntr = 0
   for helix in from_all:
-    print(dir(helix))
-    breakpoint()
     helix = reject_or_trim(helix=helix, hierarchy=pdb_hierarchy)
     if (helix is None): continue
     helix = check_continuity(helix=helix, hierarchy=pdb_hierarchy)

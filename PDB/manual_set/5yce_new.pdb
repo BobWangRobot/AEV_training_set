@@ -1,9 +1,10 @@
 HELIX    1   1 SER A    3  VAL A   17  1                                  15
 HELIX    2   2 ALA A   22  HIS A   36  1                                  15
-HELIX    3   3 GLU A   59  ALA A   74  1                                  16
-HELIX    4   4 PRO A   88  ALA A   94  1                                   7
-HELIX    5   5 TYR A  103  HIS A  119  1                                  17
-HELIX    6   6 ASP A  126  TYR A  146  1                                  21
+HELIX    3   3 GLU A   52  ALA A   57  1                                   6
+HELIX    4   4 GLU A   59  ALA A   74  1                                  16
+HELIX    5   5 PRO A   88  ALA A   94  1                                   7
+HELIX    6   6 TYR A  103  HIS A  119  1                                  17
+HELIX    7   7 ASP A  126  TYR A  146  1                                  21
 CRYST1   34.180   30.660   63.570  90.00 105.49  90.00 P 1 21 1
 SCALE1      0.029257  0.000000  0.008108        0.00000
 SCALE2      0.000000  0.032616  0.000000        0.00000

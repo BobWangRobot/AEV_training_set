@@ -1,7 +1,7 @@
 HELIX    1   1 GLU A 2804  ALA A 2819  1                                  16
 HELIX    2   2 ASP A 2847  ARG A 2857  1                                  11
-HELIX    3   3 LEU A 2863  TYR A 2880  1                                  18
-HELIX    4   4 ALA A 2891  SER A 2910  1                                  20
+HELIX    3   3 LEU A 2863  ARG A 2878  1                                  16
+HELIX    4   4 PRO A 2886  SER A 2910  1                                  25
 CRYST1  112.423   27.440   38.354  90.00  96.33  90.00 C 1 2 1
 SCALE1      0.008895  0.000000  0.000987        0.00000
 SCALE2      0.000000  0.036443  0.000000        0.00000
