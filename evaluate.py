@@ -25,13 +25,14 @@ def compare_helices(file1, file2, count_dict):
   helices_2 = pdb_inp_2.extract_secondary_structure().helices
   output = []
   find_in_h2 = []
-  format = "%-5s %-6s %-10s %-18s %-18s"
+  format = "%-2s %-9s %6s %-16s %-18s"
   for h1 in helices_1:
     status = 'unget'
     helix_id = h1.helix_id
     chain_1 = h1.start_chain_id
     resseq_1 = int(h1.start_resseq)
     for h2 in helices_2:
+      abs_length = h1.length - h2.length
       chain_2 = h2.start_chain_id
       resseq_2 = int(h2.start_resseq)
       if chain_1==chain_2:
@@ -39,32 +40,40 @@ def compare_helices(file1, file2, count_dict):
           status = 'get'
           if h1.start_resseq == h2.start_resseq:
             if h1.end_resseq == h2.end_resseq:
-              length = 'identical'
+              status = 'identical'
+              length = abs_length
               start = h1.start_resname + h1.start_resseq
               end = h1.end_resname + h1.end_resseq
               out = format % (helix_id, status, length, start, end)
               output.append(out)
               find_in_h2.append(h2)
               count_dict['identical'] += 1
-            elif h1.end_resseq < h2.end_resseq:
-              length = 'longer'
+            elif h1.end_resseq > h2.end_resseq:
+              status = 'longer'
+              length = abs_length
               start = h1.start_resname + h1.start_resseq + '(' + h2.start_resname + h2.start_resseq  + ')'
               end = h1.end_resname + h1.end_resseq + '(' + h2.end_resname + h2.end_resseq + ')'
               out = format % (helix_id, status, length, start, end)
               output.append(out)
               find_in_h2.append(h2)
               count_dict['longer'] += 1
+              if abs_length > count_dict['max_long']:
+                count_dict['max_long'] = abs_length
             else:
-              length = 'shorter'
+              status = 'shoter'
+              length = abs_length
               start = h1.start_resname + h1.start_resseq + '(' + h2.start_resname + h2.start_resseq  + ')'
               end = h1.end_resname + h1.end_resseq + '(' + h2.end_resname + h2.end_resseq + ')'
               out = format % (helix_id, status, length, start, end)
               output.append(out)
               find_in_h2.append(h2)
               count_dict['shorter'] += 1
+              if abs_length < count_dict['max_short'] and abs_length!=-5:
+                count_dict['max_short'] = abs_length
           else:
             if h1.length == h2.length:
-              length = 'same'
+              status = 'same'
+              length = abs_length
               start = h1.start_resname + h1.start_resseq + '(' + h2.start_resname + h2.start_resseq  + ')'
               end = h1.end_resname + h1.end_resseq + '(' + h2.end_resname + h2.end_resseq + ')'
               out = format % (helix_id, status, length, start, end)
@@ -72,29 +81,35 @@ def compare_helices(file1, file2, count_dict):
               find_in_h2.append(h2)
               count_dict['same'] += 1
             elif h1.length > h2.length:
-              length = 'longer'
+              status = 'longer'
+              length = abs_length
               start = h1.start_resname + h1.start_resseq + '(' + h2.start_resname + h2.start_resseq  + ')'
               end = h1.end_resname + h1.end_resseq + '(' + h2.end_resname + h2.end_resseq + ')'
               out = format % (helix_id, status, length, start, end)
               output.append(out)
               find_in_h2.append(h2)
               count_dict['longer'] += 1
+              if abs_length > count_dict['max_long']:
+                count_dict['max_long'] = abs_length
             else:
-              length = 'shorter'
+              status = 'shorter'
+              length = abs_length
               start = h1.start_resname + h1.start_resseq + '(' + h2.start_resname + h2.start_resseq  + ')'
               end = h1.end_resname + h1.end_resseq + '(' + h2.end_resname + h2.end_resseq + ')'
               out = format % (helix_id, status, length, start, end)
               output.append(out)
               find_in_h2.append(h2)
               count_dict['shorter'] += 1
+              if abs_length < count_dict['max_short'] and abs_length!=-5:
+                count_dict['max_short'] = abs_length
     if status == 'unget':
-      status = 'less'
+      status = 'lost'
       length = 'None'
       start = h1.start_resname + h1.start_resseq
       end = h1.end_resname + h1.end_resseq
       out = format % (helix_id, status, length, start, end)
       output.append(out)
-      count_dict['less'] += 1
+      count_dict['lost'] += 1
   for h3 in helices_2:
     if h3 not in find_in_h2:
       status = 'more'
@@ -115,7 +130,7 @@ def compare_helices(file1, file2, count_dict):
   return output
 
 def run(args):
-  count_dict = {'longer':0, 'shorter':0, 'same':0, 'identical':0, 'less':0, 'more':0}
+  count_dict = {'longer':0, 'shorter':0, 'same':0, 'identical':0, 'lost':0, 'more':0, 'max_long':0, 'max_short':0}
   for root, dirs, files in os.walk(args[0]):
     for file in files:
       file_name_1 = root +  file
