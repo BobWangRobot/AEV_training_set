@@ -1,6 +1,6 @@
-HELIX    1   1 ARG A    5  ARG A   14  1                                  10
-HELIX    2   2 LEU A   25  LYS A   33  1                                   9
-HELIX    3   3 THR A   89  VAL A   99  1                                  11
+HELIX    1   1 ARG A    5  HIS A   15  1                                  11
+HELIX    2   2 LEU A   25  GLU A   35  1                                  11
+HELIX    3   3 THR A   89  SER A  100  1                                  12
 CRYST1   27.070   31.250   33.760  87.98 108.00 112.11 P 1
 SCALE1      0.036941  0.015008  0.013441        0.00000
 SCALE2      0.000000  0.034540  0.003191        0.00000

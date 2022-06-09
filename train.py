@@ -89,7 +89,8 @@ def reject_or_trim(helix, hierarchy):
       text_rama_key = ramalyze.res_types[rama_key]
       assert text_rama_key in ["general", "glycine", "cis-proline",
         "trans-proline", "pre-proline", "isoleucine or valine"]
-      if not (-84 < angles[0] < -53 and -53 < angles[1] < -25):
+      if not (-80 < angles[0] < -40 and -65 < angles[1] < -25):
+        # if not (-84 < angles[0] < -53 and -53 < angles[1] < -25):
         double_delete += 1
         altloc_dict[resseq] += 1
         if double_delete > 1 and altloc_dict[resseq]==2:

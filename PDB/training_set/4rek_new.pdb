@@ -6,7 +6,7 @@ HELIX    5   5 THR A  162  ASP A  167  1                                   6
 HELIX    6   6 LYS A  172  LYS A  183  1                                  12
 HELIX    7   7 PHE A  197  ALA A  205  1                                   9
 HELIX    8   8 THR A  231  LEU A  237  1                                   7
-HELIX    9   9 LEU A  292  ASP A  303  1                                  12
+HELIX    9   9 GLY A  290  ARG A  302  1                                  13
 HELIX   10  10 ALA A  407  ALA A  423  1                                  17
 HELIX   11  11 PHE A  487  GLN A  504  1                                  18
 CRYST1   51.240   72.920   63.010  90.00 105.13  90.00 P 1 21 1

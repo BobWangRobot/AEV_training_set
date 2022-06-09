@@ -1,10 +1,10 @@
 HELIX    1   1 GLU A    4  GLU A   18  1                                  15
 HELIX    2   2 ASP A   20  SER A   35  1                                  16
 HELIX    3   3 GLU A   52  ALA A   57  1                                   6
-HELIX    4   4 GLU A   59  LEU A   76  1                                  18
+HELIX    4   4 GLU A   59  LYS A   77  1                                  19
 HELIX    5   5 LEU A   86  ALA A   94  1                                   9
 HELIX    6   6 ILE A  101  ARG A  118  1                                  18
-HELIX    7   7 ALA A  125  LYS A  147  1                                  23
+HELIX    7   7 ALA A  125  LEU A  149  1                                  25
 CRYST1   34.180   30.660   63.570  90.00 105.49  90.00 P 1 21 1
 SCALE1      0.029257  0.000000  0.008108        0.00000
 SCALE2      0.000000  0.032616  0.000000        0.00000
