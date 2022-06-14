@@ -24,8 +24,8 @@ Checking each residue's hydrogen bond length and cutting those that don't match 
 comparing PDBs in the manual_set with training_set and evaluatting the result. The result include 5 parameters: helix_ID, Status, length,  name and sequeen of start residue, name and sequeen of end residue. 
 For example:
 
-|ID|Status|length|start_res|end_res|
-|--|------|------|---------|-------|
+|ID|Status|difference|start_res|end_res|
+|--|------|----------|---------|-------|
 |1 | identical|0|GLU  59 |ALA  59|
 |2 | longer  |1|ALA  22(ASP  20) |HIS  36(SER  35)|
 
@@ -43,7 +43,7 @@ There are 6 parameters of  **Status**: **more, lost, shorter, longer, identical,
 |**shorter**|the helix from PDBs in training set is shorter than manual set.
 |**longer** |the helix from the training set is longer than manual set. 
 
-**Length** means length difference of tow helices: length of helix1 - length of helix2.
+**Difference** means length difference of tow helices: length of helix1 - length of helix2.
 
 *The max diffrence of longer and shorter less than 4 reisidues.
 # Run script
